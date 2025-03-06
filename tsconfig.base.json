@@ -17,8 +17,10 @@
     "declaration": true,
     "declarationMap": true,
     "verbatimModuleSyntax": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "types": ["@total-typescript/ts-reset"]
   },
+  "include": ["reset.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
 

@@ -8,11 +8,17 @@ importers:
 
   .:
     devDependencies:
+      '@total-typescript/ts-reset':
+        specifier: ^0.6.1
+        version: 0.6.1
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
 
 packages:
+
+  '@total-typescript/ts-reset@0.6.1':
+    resolution: {integrity: sha512-cka47fVSo6lfQDIATYqb/vO1nvFfbPw7uWLayIXIhGETj0wcOOlrlkobOMDNQOFr9QOafegUPq13V2+6vtD7yg==}
 
   typescript@5.8.2:
     resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
@@ -20,5 +26,7 @@ packages:
     hasBin: true
 
 snapshots:
+
+  '@total-typescript/ts-reset@0.6.1': {}
 
   typescript@5.8.2: {}
