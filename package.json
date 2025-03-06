@@ -1,0 +1,18 @@
+{
+  "name": "@monorepo",
+  "version": "0.0.1",
+  "description": "a monorepo setup",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonny Gamba",
+  "license": "ISC",
+  "volta": {
+    "node": "22.14.0",
+    "pnpm": "10.6.0"
+  },
+  "engines": {
+    "node": "22.14.0",
+    "pnpm": "10.6.0"
+  }
+}
