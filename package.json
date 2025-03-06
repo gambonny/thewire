@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "a monorepo setup",
   "scripts": {
-    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +"
+    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +",
+    "build": "wireit"
   },
   "author": "Jonny Gamba",
   "license": "ISC",
@@ -19,5 +20,12 @@
     "@total-typescript/ts-reset": "^0.6.1",
     "typescript": "^5.8.2",
     "wireit": "^0.14.11"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "./_apps/web:build"
+      ]
+    }
   }
 }
