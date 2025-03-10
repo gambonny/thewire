@@ -12,7 +12,6 @@
   "scripts": {
     "format": "wireit"
   },
-  "license": "ISC",
   "engines": {
     "node": "22.12.0",
     "pnpm": "10.6.0"
@@ -23,11 +22,11 @@
   "dependencies": {
     "@eslint/js": "^9.22.0",
     "@types/eslint-config-prettier": "^6.11.3",
-    "eslint": "^9.22.0",
+    "eslint": "catalog:",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^16.0.0",
-    "prettier": "^3.5.3",
+    "prettier": "catalog:",
     "typescript": "catalog:",
     "typescript-eslint": "^8.26.1"
   },

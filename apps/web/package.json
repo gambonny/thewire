@@ -6,18 +6,23 @@
   "scripts": {
     "dev": "wireit",
     "build": "wireit",
-    "preview": "wireit"
+    "preview": "wireit",
+    "lint": "wireit",
+    "format": "wireit"
   },
   "dependencies": {
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@monorepo/eslint-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "@vitejs/plugin-react-swc": "catalog:",
     "vite": "catalog:",
-    "typescript": "catalog:"
+    "@vitejs/plugin-react-swc": "catalog:",
+    "typescript": "catalog:",
+    "prettier": "catalog:",
+    "eslint": "catalog:"
   },
   "wireit": {
     "dev": {
@@ -50,6 +55,29 @@
       "dependencies": [
         "build"
       ]
+    },
+    "lint": {
+      "command": "eslint .",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*",
+        "index.html"
+      ]
+    },
+    "format": {
+      "command": "prettier --ignore-path ../../.prettierignore --write .",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*",
+        "index.html"
+      ]
     }
+  },
+  "engines": {
+    "node": "22.12.0",
+    "pnpm": "10.6.0"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }
