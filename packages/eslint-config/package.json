@@ -1,0 +1,42 @@
+{
+  "name": "@monorepo/eslint-config",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    "base": "./eslint.config.js",
+    "import": "./eslint.config.js"
+  },
+  "scripts": {
+    "format": "wireit"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": "22.12.0",
+    "pnpm": "10.6.0"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.26.1"
+  },
+  "wireit": {
+    "format": {
+      "command": "prettier --ignore-path ../../.prettierignore --write .",
+      "files": [
+        "eslint.config.js"
+      ]
+    }
+  }
+}

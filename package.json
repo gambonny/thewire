@@ -4,7 +4,8 @@
   "description": "a monorepo setup",
   "scripts": {
     "clean": "find ./ -name node_modules -type d -exec rm -rf {} +",
-    "build": "wireit"
+    "build": "wireit",
+    "format": "wireit"
   },
   "author": "Jonny Gamba",
   "license": "ISC",
@@ -18,13 +19,18 @@
   },
   "devDependencies": {
     "wireit": "^0.14.11",
-    "typescript": "^5.8.2",
+    "typescript": "catalog:",
     "@total-typescript/ts-reset": "^0.6.1"
   },
   "wireit": {
     "build": {
       "dependencies": [
         "./apps/web:build"
+      ]
+    },
+    "format": {
+      "dependencies": [
+        "./packages/eslint-config:format"
       ]
     }
   }
