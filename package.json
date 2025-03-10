@@ -24,7 +24,7 @@
   "wireit": {
     "build": {
       "dependencies": [
-        "./_apps/web:build"
+        "./apps/web:build"
       ]
     }
   }

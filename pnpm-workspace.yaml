@@ -1,5 +1,5 @@
 packages:
-  - _apps/**
+  - apps/**
 catalog:
   vite: ^6.2.0
   "@vitejs/plugin-react-swc": ^3.8.0
