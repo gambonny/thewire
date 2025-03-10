@@ -1,0 +1,54 @@
+{
+  "name": "@monorepo/web",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "wireit",
+    "build": "wireit",
+    "preview": "wireit"
+  },
+  "dependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react-swc": "catalog:",
+    "vite": "catalog:"
+  },
+  "wireit": {
+    "dev": {
+      "command": "vite dev",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*",
+        "index.html"
+      ]
+    },
+    "tsc": {
+      "command": "tsc -b"
+    },
+    "build": {
+      "command": "vite build",
+      "dependencies": [
+        "tsc"
+      ],
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*",
+        "index.html"
+      ],
+      "output": [
+        "dist/**"
+      ]
+    },
+    "preview": {
+      "command": "vite preview",
+      "dependencies": [
+        "build"
+      ]
+    }
+  }
+}
