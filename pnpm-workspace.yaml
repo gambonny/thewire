@@ -1,14 +1,18 @@
 packages:
   - apps/**
+  - packages/**
 catalog:
   vite: ^6.2.0
   react: ^19.0.0
   react-dom: ^19.0.0
 
   # devDependencies
-  "@types/react": ^19.0.10
-  "@types/react-dom": ^19.0.4
-  "@vitejs/plugin-react-swc": ^3.8.0
+  prettier: ^3.5.3
+  typescript: ^5.8.2
+  eslint: ^9.22.0
+  '@types/react': ^19.0.10
+  '@types/react-dom': ^19.0.4
+  '@vitejs/plugin-react-swc': ^3.8.0
 onlyBuiltDependencies:
-  - "@swc/core"
+  - '@swc/core'
   - esbuild
