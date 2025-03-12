@@ -1,4 +1,4 @@
-declare module '@urrepo/eslint-config' {
+declare module '@monorepo/eslint-config' {
   import { Linter } from 'eslint'
 
   const config: Linter.Config

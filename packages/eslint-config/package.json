@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "eslint.config.js",
   "types": "index.d.ts",
   "exports": {
     "base": "./eslint.config.js",
@@ -22,6 +22,7 @@
   "dependencies": {
     "@eslint/js": "^9.22.0",
     "@types/eslint-config-prettier": "^6.11.3",
+    "@vitest/eslint-plugin": "^1.1.37",
     "eslint": "catalog:",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",

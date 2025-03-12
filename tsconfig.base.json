@@ -18,7 +18,7 @@
     "declarationMap": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "types": ["@total-typescript/ts-reset"]
+    "types": ["@total-typescript/ts-reset", "vitest/globals"]
   },
   "include": ["reset.d.ts"],
   "exclude": ["node_modules", "dist"]

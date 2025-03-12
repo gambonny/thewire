@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "find ./ -name node_modules -type d -exec rm -rf {} +",
     "build": "wireit",
+    "test": "wireit",
     "format": "wireit",
     "lint": "wireit"
   },
@@ -19,15 +20,19 @@
     "pnpm": "10.6.0"
   },
   "devDependencies": {
-    "wireit": "^0.14.11",
+    "@total-typescript/ts-reset": "^0.6.1",
     "typescript": "catalog:",
-    "@total-typescript/ts-reset": "^0.6.1"
+    "vitest": "^3.0.8",
+    "wireit": "^0.14.11"
   },
   "wireit": {
     "build": {
       "dependencies": [
         "./apps/web:build"
       ]
+    },
+    "test": {
+      "command": "vitest --run"
     },
     "lint": {
       "dependencies": [
