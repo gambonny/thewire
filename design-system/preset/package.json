@@ -1,0 +1,48 @@
+{
+  "name": "@monorepo/preset",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "scripts": {
+    "test": "wireit",
+    "lint": "wireit",
+    "format": "wireit"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "engines": {
+    "node": "22.12.0",
+    "pnpm": "10.6.0"
+  },
+  "devDependencies": {
+    "@monorepo/eslint-config": "workspace:*",
+    "@pandacss/dev": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:"
+  },
+  "wireit": {
+    "test": {
+      "command": "vitest run",
+      "files": [
+        "src/**/*.ts",
+        "tests/**/*.ts",
+        "vitest.config.ts"
+      ]
+    },
+    "lint": {
+      "command": "eslint .",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*"
+      ]
+    },
+    "format": {
+      "command": "prettier --ignore-path ../../.prettierignore --write .",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*"
+      ]
+    }
+  }
+}
