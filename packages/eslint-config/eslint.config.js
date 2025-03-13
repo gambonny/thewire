@@ -1,4 +1,5 @@
 import eslintjs from '@eslint/js'
+import vitest from '@vitest/eslint-plugin'
 import eslintts from 'typescript-eslint'
 import prettier from 'eslint-config-prettier'
 import prettierPlugin from 'eslint-plugin-prettier'
@@ -29,6 +30,21 @@ export default eslintts.config(
     extends: [eslintts.configs.disableTypeChecked],
   },
   prettier,
+  {
+    name: 'vitest',
+    files: ['tests/**'],
+    plugins: {
+      vitest,
+    },
+    rules: {
+      ...vitest.configs.all.rules,
+    },
+    languageOptions: {
+      globals: {
+        ...vitest.environments.env.globals,
+      },
+    },
+  },
   {
     name: 'prettier',
     files: ['**/*.{js,jsx,ts,tsx,md}'],

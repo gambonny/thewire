@@ -7,6 +7,7 @@
     "dev": "wireit",
     "build": "wireit",
     "preview": "wireit",
+    "test": "wireit",
     "lint": "wireit",
     "format": "wireit"
   },
@@ -18,11 +19,11 @@
     "@monorepo/eslint-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "vite": "catalog:",
     "@vitejs/plugin-react-swc": "catalog:",
-    "typescript": "catalog:",
+    "eslint": "catalog:",
     "prettier": "catalog:",
-    "eslint": "catalog:"
+    "typescript": "catalog:",
+    "vite": "catalog:"
   },
   "wireit": {
     "dev": {
@@ -54,6 +55,14 @@
       "command": "vite preview",
       "dependencies": [
         "build"
+      ]
+    },
+    "test": {
+      "command": "vitest run",
+      "files": [
+        "src/**/*.ts",
+        "tests/**/*.ts",
+        "vitest.config.ts"
       ]
     },
     "lint": {
