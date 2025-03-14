@@ -26,6 +26,15 @@ export default eslintts.config(
     },
   },
   {
+    files: ['**/*.cjs'], // Linting was failing for postcss.config.cjs
+    languageOptions: {
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+    extends: [eslintts.configs.disableTypeChecked],
+  },
+  {
     files: ['**/*.js'],
     extends: [eslintts.configs.disableTypeChecked],
   },

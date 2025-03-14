@@ -66,6 +66,7 @@
       "files": [
         "src/**/*.ts",
         "tests/**/*.ts",
+        "tsconfig.json",
         "vitest.config.ts"
       ]
     },
@@ -73,6 +74,8 @@
       "command": "eslint .",
       "files": [
         "src/**/*.{ts,tsx}",
+        "tests/**/*.{ts,tsx}",
+        "tsconfig.json",
         "*config.*",
         "index.html"
       ]
@@ -81,6 +84,8 @@
       "command": "prettier --ignore-path ../../.prettierignore --write .",
       "files": [
         "src/**/*.{ts,tsx}",
+        "tests/**/*.{ts,tsx}",
+        "tsconfig.json",
         "*config.*",
         "index.html"
       ]

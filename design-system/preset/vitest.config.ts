@@ -2,7 +2,7 @@ import { defineProject } from 'vitest/config'
 
 export default defineProject({
   test: {
-    name: 'Preset',
+    name: 'Design System —  Preset',
     globals: true,
     environment: 'node',
   },

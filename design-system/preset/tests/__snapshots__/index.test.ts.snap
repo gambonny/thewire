@@ -7,9 +7,39 @@ exports[`a test > matches the snapshot 1`] = `
     "extend": {
       "tokens": {
         "colors": {
+          "background": {
+            "default": {
+              "value": "{colors.gray.900}",
+            },
+            "muted": {
+              "value": "{colors.gray.700}",
+            },
+            "overlay": {
+              "value": "rgba(0, 0, 0, 0.5)",
+            },
+            "surface": {
+              "value": "{colors.gray.800}",
+            },
+          },
+          "border": {
+            "default": {
+              "value": "{colors.white}",
+            },
+            "subtle": {
+              "value": "{colors.gray.600}",
+            },
+          },
           "cobalt": {
             "50": {
               "value": "#EBEDF9",
+            },
+          },
+          "text": {
+            "default": {
+              "value": "{colors.white}",
+            },
+            "muted": {
+              "value": "{colors.gray.400}",
             },
           },
         },

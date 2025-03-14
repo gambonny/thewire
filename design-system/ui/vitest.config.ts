@@ -2,7 +2,7 @@ import { defineProject } from 'vitest/config'
 
 export default defineProject({
   test: {
-    name: 'design-system/ui',
+    name: 'Design System —  UI',
     globals: true,
     environment: 'node',
   },

@@ -38,13 +38,19 @@
     },
     "lint": {
       "dependencies": [
-        "./apps/web:lint"
+        "./apps/web:lint",
+        "./design-system/preset:lint",
+        "./design-system/styled:lint",
+        "./design-system/ui/:lint"
       ]
     },
     "format": {
       "dependencies": [
         "./apps/web:format",
-        "./packages/eslint-config:format"
+        "./packages/eslint-config:format",
+        "./design-system/preset:lint",
+        "./design-system/styled:lint",
+        "./design-system/ui/:lint"
       ]
     }
   }
