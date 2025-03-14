@@ -108,6 +108,9 @@ importers:
       '@monorepo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@monorepo/preset':
+        specifier: workspace:*
+        version: link:../preset
       '@pandacss/dev':
         specifier: 'catalog:'
         version: 0.53.1(typescript@5.8.2)

@@ -17,6 +17,7 @@
     "pnpm": "10.6.0"
   },
   "devDependencies": {
+    "@monorepo/preset": "workspace:*",
     "@monorepo/eslint-config": "workspace:*",
     "@pandacss/dev": "catalog:",
     "eslint": "catalog:",
@@ -67,4 +68,3 @@
     "./styles.css": "./dist/styles.css"
   }
 }
-
