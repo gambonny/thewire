@@ -66,6 +66,12 @@ importers:
       '@monorepo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@monorepo/styled':
+        specifier: workspace:*
+        version: link:../../design-system/styled
+      '@pandacss/dev':
+        specifier: 'catalog:'
+        version: 0.53.1(typescript@5.8.2)
       '@types/react':
         specifier: 'catalog:'
         version: 19.0.10
