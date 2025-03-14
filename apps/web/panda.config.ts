@@ -1,19 +1,16 @@
 import { defineConfig } from '@pandacss/dev'
 
 export default defineConfig({
-  // Whether to use css reset
   preflight: true,
-
-  // Where to look for your css declarations
-  include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
-
-  // Files to exclude
+  jsxFramework: 'react',
+  include: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    '../../design-system/ui/src/**/*.{js,jsx,ts,tsx}',
+  ],
+  presets: ['@pandacss/preset-panda', '@monorepo/preset'],
   exclude: [],
-
-  // Useful for theme customization
+  importMap: '@monorepo/styled',
   theme: {
     extend: {},
   },
-
-  importMap: '@monorepo/styled',
 })

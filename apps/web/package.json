@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "wireit",
+    "dev": "vite dev",
     "build": "wireit",
     "preview": "wireit",
     "test": "wireit",
@@ -12,11 +12,13 @@
     "format": "wireit"
   },
   "dependencies": {
+    "@monorepo/ui": "workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
     "@monorepo/styled": "workspace:*",
+    "@monorepo/preset": "workspace:*",
     "@monorepo/eslint-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
