@@ -1,6 +1,7 @@
 packages:
   - apps/**
   - packages/**
+  - tooling/**
   - design-system/**
 catalog:
   vite: ^6.2.0

@@ -47,7 +47,7 @@
     "format": {
       "dependencies": [
         "./apps/web:format",
-        "./packages/eslint-config:format",
+        "./tooling/eslint-config:format",
         "./design-system/preset:lint",
         "./design-system/styled:lint",
         "./design-system/ui/:lint"
