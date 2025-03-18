@@ -50,6 +50,9 @@ importers:
       '@types/react-dom':
         specifier: 'catalog:'
         version: 19.0.4(@types/react@19.0.10)
+      type-fest:
+        specifier: ^4.37.0
+        version: 4.37.0
       typescript:
         specifier: 'catalog:'
         version: 5.8.2
@@ -1846,6 +1849,10 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
+  type-fest@4.37.0:
+    resolution: {integrity: sha512-S/5/0kFftkq27FPNye0XM1e2NsnoD/3FS+pBmbjmmtLT6I+i344KoOf7pvXreaFsDamWeaJX55nczA1m5PsBDg==}
+    engines: {node: '>=16'}
+
   typescript-eslint@8.26.1:
     resolution: {integrity: sha512-t/oIs9mYyrwZGRpDv3g+3K6nZ5uhKEMt2oNmAPwaY4/ye0+EH4nXIPYNtkYFS6QHm+1DFg34DbglYBz5P9Xysg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -3548,6 +3555,8 @@ snapshots:
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
+
+  type-fest@4.37.0: {}
 
   typescript-eslint@8.26.1(eslint@9.22.0)(typescript@5.8.2):
     dependencies:
