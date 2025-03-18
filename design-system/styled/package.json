@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "scripts": {
-    "prepare": "panda codegen --clean",
+    "prepare": "wireit",
     "dev": "panda codegen --watch",
     "lint": "wireit",
     "format": "wireit"
@@ -17,13 +17,19 @@
     "pnpm": "10.6.0"
   },
   "devDependencies": {
-    "@monorepo/preset": "workspace:*",
+    "@thewire/preset": "workspace:*",
     "@monorepo/eslint-config": "workspace:*",
     "@pandacss/dev": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:"
   },
   "wireit": {
+    "prepare": {
+      "command": "panda codegen --clean",
+      "dependencies": [
+        "../preset:build"
+      ]
+    },
     "lint": {
       "command": "eslint .",
       "files": [

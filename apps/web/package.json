@@ -1,10 +1,10 @@
 {
-  "name": "@monorepo/web",
+  "name": "@thewire/web",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "wireit",
     "build": "wireit",
     "preview": "wireit",
     "test": "wireit",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@monorepo/styled": "workspace:*",
-    "@monorepo/preset": "workspace:*",
+    "@thewire/preset": "workspace:*",
     "@monorepo/eslint-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
@@ -36,7 +36,11 @@
         "src/**/*.{ts,tsx}",
         "*config.*",
         "index.html"
-      ]
+      ],
+      "dependencies": [
+        "../../design-system/preset:bundle"
+      ],
+      "output": []
     },
     "tsc": {
       "command": "tsc -b"
@@ -44,7 +48,8 @@
     "build": {
       "command": "vite build",
       "dependencies": [
-        "tsc"
+        "tsc",
+        "../../design-system/preset:build"
       ],
       "files": [
         "src/**/*.{ts,tsx}",
@@ -68,6 +73,9 @@
         "tests/**/*.ts",
         "tsconfig.json",
         "vitest.config.ts"
+      ],
+      "dependencies": [
+        "../../design-system/preset:build"
       ]
     },
     "lint": {
