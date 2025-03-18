@@ -21,7 +21,7 @@ const preset = definePreset({
           },
           background: {
             default: { value: '{colors.gray.900}' }, // Main background
-            surface: { value: '{colors.gray.800}' }, // Panels, cards, form containers
+            surface: { value: '{colors.green.800}' }, // Panels, cards, form containers
             overlay: { value: 'rgba(0, 0, 0, 0.5)' }, // Modal overlays, backdrops
             muted: { value: '{colors.gray.700}' }, // Subtle background variations
           },

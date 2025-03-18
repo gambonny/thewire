@@ -1,4 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*", "vitest.config.ts", "eslint.config.js", "tests/**/*"]
+  "include": ["src/**/*", "vitest.config.ts", "eslint.config.js", "tests/**/*", "tsup.config.ts"],
+  "compilerOptions": {
+    "emitDeclarationOnly": false
+  }
 }

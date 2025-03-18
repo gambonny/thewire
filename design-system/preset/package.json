@@ -1,9 +1,17 @@
 {
-  "name": "@monorepo/preset",
+  "name": "@thewire/preset",
   "type": "module",
   "version": "0.0.1",
-  "main": "src/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "scripts": {
+    "bundle": "wireit",
+    "build": "wireit",
     "test": "wireit",
     "lint": "wireit",
     "format": "wireit"
@@ -19,9 +27,27 @@
     "@monorepo/eslint-config": "workspace:*",
     "@pandacss/dev": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:"
+    "prettier": "catalog:",
+    "tsup": "catalog:"
   },
   "wireit": {
+    "bundle": {
+      "command": "tsup --watch",
+      "files": [
+        "src/**/*.{ts,tsx}"
+      ],
+      "service": true
+    },
+    "build": {
+      "command": "tsup",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "tsconfig.json"
+      ],
+      "output": [
+        "dist/**"
+      ]
+    },
     "test": {
       "command": "vitest run",
       "files": [
