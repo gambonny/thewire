@@ -40,6 +40,7 @@
     "lint": {
       "dependencies": [
         "./apps/web:lint",
+        "./packages/services:lint",
         "./design-system/preset:lint",
         "./design-system/styled:lint",
         "./design-system/ui/:lint"
@@ -48,6 +49,7 @@
     "format": {
       "dependencies": [
         "./apps/web:format",
+        "./packages/services:format",
         "./tooling/eslint-config:format",
         "./design-system/preset:format",
         "./design-system/styled:format",
