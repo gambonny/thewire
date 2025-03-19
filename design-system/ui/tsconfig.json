@@ -2,6 +2,6 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx"
-  }, 
+  },
   "include": ["src/**/*", "vitest.config.ts", "eslint.config.js", "tests/**/*"]
 }

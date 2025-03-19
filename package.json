@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo",
+  "name": "@thewire",
   "version": "0.0.1",
   "description": "a monorepo setup",
   "scripts": {
@@ -49,9 +49,9 @@
       "dependencies": [
         "./apps/web:format",
         "./tooling/eslint-config:format",
-        "./design-system/preset:lint",
-        "./design-system/styled:lint",
-        "./design-system/ui/:lint"
+        "./design-system/preset:format",
+        "./design-system/styled:format",
+        "./design-system/ui/:format"
       ]
     }
   }

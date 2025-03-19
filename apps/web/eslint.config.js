@@ -1,3 +1,3 @@
-import baseConfig from '@monorepo/eslint-config'
+import reactConfig from '@monorepo/eslint-config/react'
 
-export default [...baseConfig]
+export default [...reactConfig]

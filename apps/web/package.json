@@ -32,6 +32,7 @@
   "wireit": {
     "dev": {
       "command": "vite dev",
+      "service": true,
       "files": [
         "src/**/*.{ts,tsx}",
         "*config.*",
