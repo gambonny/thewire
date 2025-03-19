@@ -25,6 +25,7 @@
     "@types/react-dom": "catalog:",
     "type-fest": "^4.37.0",
     "typescript": "catalog:",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.8",
     "wireit": "^0.14.11"
   },

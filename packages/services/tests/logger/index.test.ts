@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { consoleLogger } from '../../src/logger'
-import { createMockLogger } from '../../src/logger/mocks'
+import { consoleLogger } from '@/logger'
+import { createMockLogger } from '@/logger/mocks'
 
 describe('consoleLogger', () => {
   // Spy on the real console methods
@@ -26,7 +26,6 @@ describe('consoleLogger', () => {
 
   it('calls console.debug with a formatted debug message', () => {
     consoleLogger.debug('Debug message', { extra: true })
-
     expect(console.debug).toHaveBeenCalledWith('[DEBUG] Debug message', {
       extra: true,
     })

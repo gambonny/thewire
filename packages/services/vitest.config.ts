@@ -1,4 +1,5 @@
 import { defineProject } from 'vitest/config'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineProject({
   test: {
@@ -6,4 +7,5 @@ export default defineProject({
     globals: true,
     environment: 'node',
   },
+  plugins: [tsconfigPaths()],
 })

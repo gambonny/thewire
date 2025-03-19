@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { createServices } from '../src'
+import { createServices } from '@/index'
 
 describe('createServices', () => {
   it('returns an object with logger', () => {
