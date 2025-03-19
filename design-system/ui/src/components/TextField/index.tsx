@@ -9,7 +9,10 @@ type SupportedInputTypes = Extract<
   'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search'
 >
 
-type InputProps = Except<ComponentPropsWithoutRef<'input'>, 'type'>
+type InputProps = Except<
+  ComponentPropsWithoutRef<'input'>,
+  'type' | 'autoFocus'
+>
 
 type TextFieldProps = {
   label: string
@@ -23,8 +26,8 @@ export const TextField = ({
   type = 'text',
   ...props
 }: TextFieldProps) => {
-  const id = useId()
   const ref = useRef<HTMLInputElement>(null)
+  const id = useId()
 
   useEffect(() => {
     if (autoFocus && ref.current) {
@@ -35,7 +38,7 @@ export const TextField = ({
   return (
     <p>
       <label htmlFor={id}>{label}</label>
-      <input id={id} type={type} ref={ref} {...props} />
+      <input id={id} type={type} ref={ref} autoFocus={autoFocus} {...props} />
     </p>
   )
 }

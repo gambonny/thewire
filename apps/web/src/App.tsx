@@ -1,9 +1,8 @@
-import { css } from '@monorepo/styled/css'
 import { TextField } from '@monorepo/ui'
 
 function App() {
   return (
-    <div className={css({ background: 'background.surface' })}>
+    <div>
       <TextField label="name" autoFocus />
     </div>
   )
