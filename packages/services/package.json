@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./mocks": "./src/mocks.ts"
+  },
   "scripts": {
     "test": "wireit",
     "lint": "wireit",
