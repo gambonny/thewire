@@ -7,9 +7,9 @@ export default defineConfig({
     './src/**/*.{js,jsx,ts,tsx}',
     '../../design-system/ui/src/**/*.{js,jsx,ts,tsx}',
   ],
-  presets: ['@pandacss/preset-panda', '@monorepo/preset'],
+  presets: ['@pandacss/preset-panda', '@thewire/preset'],
   exclude: [],
-  importMap: '@monorepo/styled',
+  importMap: '@thewire/styled',
   theme: {
     extend: {},
   },

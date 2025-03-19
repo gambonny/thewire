@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/eslint-config",
+  "name": "@thewire/eslint-config",
   "type": "module",
   "version": "0.0.1",
   "description": "",

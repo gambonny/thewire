@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/preset",
+  "name": "@thewire/preset",
   "type": "module",
   "version": "0.0.1",
   "main": "src/index.ts",
@@ -16,7 +16,7 @@
     "pnpm": "10.6.0"
   },
   "devDependencies": {
-    "@monorepo/eslint-config": "workspace:*",
+    "@thewire/eslint-config": "workspace:*",
     "@pandacss/dev": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:"

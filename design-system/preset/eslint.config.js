@@ -1,3 +1,3 @@
-import baseConfig from '@monorepo/eslint-config'
+import baseConfig from '@thewire/eslint-config'
 
 export default [...baseConfig]

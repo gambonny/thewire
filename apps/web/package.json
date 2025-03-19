@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/web",
+  "name": "@thewire/web",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -12,14 +12,14 @@
     "format": "wireit"
   },
   "dependencies": {
-    "@monorepo/ui": "workspace:*",
+    "@thewire/ui": "workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@monorepo/styled": "workspace:*",
-    "@monorepo/preset": "workspace:*",
-    "@monorepo/eslint-config": "workspace:*",
+    "@thewire/styled": "workspace:*",
+    "@thewire/preset": "workspace:*",
+    "@thewire/eslint-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react-swc": "catalog:",

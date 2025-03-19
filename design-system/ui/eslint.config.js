@@ -1,3 +1,3 @@
-import reactConfig from '@monorepo/eslint-config/react'
+import reactConfig from '@thewire/eslint-config/react'
 
 export default [...reactConfig]

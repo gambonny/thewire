@@ -1,4 +1,4 @@
-import { TextField } from '@monorepo/ui'
+import { TextField } from '@thewire/ui'
 
 function App() {
   return (
