@@ -46,7 +46,7 @@ export default eslintts.config(
       vitest,
     },
     rules: {
-      ...vitest.configs.all.rules,
+      ...vitest.configs.recommended.rules,
     },
     languageOptions: {
       globals: {

@@ -1,0 +1,51 @@
+{
+  "name": "@thewire/services",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./mocks": "./src/mocks.ts"
+  },
+  "scripts": {
+    "test": "wireit",
+    "lint": "wireit",
+    "format": "wireit"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "engines": {
+    "node": "22.12.0",
+    "pnpm": "10.6.0"
+  },
+  "devDependencies": {
+    "@thewire/eslint-config": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:"
+  },
+  "wireit": {
+    "test": {
+      "command": "vitest run",
+      "files": [
+        "src/**/*.ts",
+        "tests/**/*.ts",
+        "vitest.config.ts"
+      ]
+    },
+    "lint": {
+      "command": "eslint .",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*"
+      ]
+    },
+    "format": {
+      "command": "prettier --ignore-path ../../.prettierignore --write .",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "*config.*"
+      ]
+    }
+  }
+}
