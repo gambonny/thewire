@@ -4,12 +4,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "wireit",
     "build": "wireit",
     "preview": "wireit",
     "test": "wireit",
     "lint": "wireit",
-    "format": "wireit"
+    "format": "wireit",
+    "bundle:analyse": "wireit"
   },
   "dependencies": {
     "@thewire/ui": "workspace:*",
@@ -17,17 +18,18 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@thewire/styled": "workspace:*",
-    "@thewire/preset": "workspace:*",
+    "@pandacss/dev": "catalog:",
     "@thewire/eslint-config": "workspace:*",
+    "@thewire/preset": "workspace:*",
+    "@thewire/styled": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react-swc": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "catalog:",
-    "vite": "catalog:",
-    "@pandacss/dev": "catalog:"
+    "vite": "catalog:"
   },
   "wireit": {
     "dev": {
@@ -90,6 +92,12 @@
         "*config.*",
         "index.html"
       ]
+    },
+    "bundle:analyse": {
+      "command": "vite build",
+      "env": {
+        "ANALYSE_BUNDLE": "true"
+      }
     }
   },
   "engines": {
