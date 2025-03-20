@@ -23,6 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
+## Performance
+stats.html
+
 ## Panda
 styled-system
 styled-system-studio

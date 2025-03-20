@@ -4,12 +4,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "wireit",
     "build": "wireit",
     "preview": "wireit",
     "test": "wireit",
     "lint": "wireit",
-    "format": "wireit"
+    "format": "wireit",
+    "bundle:analyse": "wireit"
   },
   "dependencies": {
     "@thewire/ui": "workspace:*",
@@ -17,17 +18,20 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@thewire/styled": "workspace:*",
-    "@thewire/preset": "workspace:*",
+    "@pandacss/dev": "catalog:",
+    "@size-limit/file": "^11.2.0",
     "@thewire/eslint-config": "workspace:*",
+    "@thewire/preset": "workspace:*",
+    "@thewire/styled": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react-swc": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "size-limit": "^11.2.0",
     "typescript": "catalog:",
-    "vite": "catalog:",
-    "@pandacss/dev": "catalog:"
+    "vite": "catalog:"
   },
   "wireit": {
     "dev": {
@@ -42,11 +46,8 @@
     "tsc": {
       "command": "tsc -b"
     },
-    "build": {
+    "compile": {
       "command": "vite build",
-      "dependencies": [
-        "tsc"
-      ],
       "files": [
         "src/**/*.{ts,tsx}",
         "*config.*",
@@ -54,6 +55,13 @@
       ],
       "output": [
         "dist/**"
+      ]
+    },
+    "build": {
+      "command": "size-limit",
+      "dependencies": [
+        "tsc",
+        "compile"
       ]
     },
     "preview": {
@@ -90,8 +98,21 @@
         "*config.*",
         "index.html"
       ]
+    },
+    "bundle:analyse": {
+      "command": "vite build",
+      "env": {
+        "ANALYSE_BUNDLE": "true"
+      }
     }
   },
+  "size-limit": [
+    {
+      "path": "dist/assets/*.js",
+      "brotli": true,
+      "limit": "100kB"
+    }
+  ],
   "engines": {
     "node": "22.12.0",
     "pnpm": "10.6.0"
