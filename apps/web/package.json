@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@pandacss/dev": "catalog:",
+    "@size-limit/file": "^11.2.0",
     "@thewire/eslint-config": "workspace:*",
     "@thewire/preset": "workspace:*",
     "@thewire/styled": "workspace:*",
@@ -28,6 +29,7 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "rollup-plugin-visualizer": "^5.14.0",
+    "size-limit": "^11.2.0",
     "typescript": "catalog:",
     "vite": "catalog:"
   },
@@ -44,11 +46,8 @@
     "tsc": {
       "command": "tsc -b"
     },
-    "build": {
+    "compile": {
       "command": "vite build",
-      "dependencies": [
-        "tsc"
-      ],
       "files": [
         "src/**/*.{ts,tsx}",
         "*config.*",
@@ -56,6 +55,13 @@
       ],
       "output": [
         "dist/**"
+      ]
+    },
+    "build": {
+      "command": "size-limit",
+      "dependencies": [
+        "tsc",
+        "compile"
       ]
     },
     "preview": {
@@ -100,6 +106,13 @@
       }
     }
   },
+  "size-limit": [
+    {
+      "path": "dist/assets/*.js",
+      "brotli": true,
+      "limit": "100kB"
+    }
+  ],
   "engines": {
     "node": "22.12.0",
     "pnpm": "10.6.0"
